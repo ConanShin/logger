@@ -1,9 +1,12 @@
-Express API Logger
+# Express API Logger
 
-Install
+## Install
+``` javascript
 npm install -D @overnightjs/logger moment
+```
 
-Usage
+## Example
+```javascript
 import {Logger, Log} from 'logger'
 
 class ClassA {
@@ -13,3 +16,4 @@ class ClassA {
 		Log.Error('error log')      // stored in Error directory
 	} 
 }
+```
