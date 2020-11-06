@@ -1,11 +1,10 @@
 {
   "name": "@ConanShin/logger",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "## Install ``` javascript npm install -D @overnightjs/logger moment ```",
   "main": "Logger.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc Logger.ts"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -17,15 +16,12 @@
     "url": "https://github.com/ConanShin/logger/issues"
   },
   "homepage": "https://github.com/ConanShin/logger#readme",
-  "devDependencies": {
-    "@overnightjs/logger": "^1.2.0",
-    "moment": "^2.29.1",
-    "path": "^0.12.7"
-  },
+  "devDependencies": {},
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
-    "tsc": "^1.20150623.0"
+    "@overnightjs/logger": "^1.2.0",
+    "moment": "^2.29.1"
   }
 }
