@@ -4,7 +4,7 @@ import * as fs from 'fs'
 import moment = require('moment')
 const logPath = process.env.LOGPATH || path.resolve('../')
 
-const parameterParser = parameter => {
+const parameterParser = (parameter: any) => {
     if ( Object.keys(parameter.body).length > 0 ) {
         return 'Body parameters ' + JSON.stringify(parameter.body)
     } else if ( Object.keys(parameter.query).length > 0 ) {
@@ -14,7 +14,7 @@ const parameterParser = parameter => {
     }
 }
 
-const writeToFile = (message, subPath) => {
+const writeToFile = (message: string, subPath: string) => {
     const directory = `${logPath}/${subPath}`
     const fileName = `${directory}/${moment().format('YYYYMMDD')}.log`
     if (!fs.existsSync(directory)) {
@@ -29,11 +29,11 @@ const writeToFile = (message, subPath) => {
 }
 
 const Log = {
-    Info: message => {
+    Info: (message: string) => {
         log.Info(message)
         writeToFile(message + '\n', 'info')
     },
-    Error: message => {
+    Error: (message: string) => {
         log.Err(message)
         writeToFile(message, 'error')
     }
@@ -59,4 +59,4 @@ const Logger = function (
     return descriptor
 }
 
-export {Logger, Log}
+export default {Logger, Log}
